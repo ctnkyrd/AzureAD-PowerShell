@@ -8,3 +8,9 @@ Install AzureAD module to PowerShell : Install-Module -Name AzureAD
 4-To set a variable containing reply urls : $replyURLs = $app.ReplyURLs;
 5-To Add new reply url to application : $replyURLs.Add("https://yourapplication.com");
 6-To Remove reply url from application :  $replyURLs.Remove("https://yourapplication.com");
+7-To list ownership of the application (You can find the objectId via command Get-AzureAdApplication command) : Get-AzureADApplicationOwner -ObjectId "your application objectid"
+
+8- You can add or remove application owner by : Add-AzureADApplicationOwner -ObjectId $appObjectId -RefObjectId $userObjectId
+8.1 - You can remove owner/user by: Remove-AzureADApplicationOwner -ObjectId "$appObjectId" -OwnerId "$userObjectId"
+
+9- To List all active directory users (you can list users and their objectids from here) : Get-AzureADUser -SearchString "Amin"
