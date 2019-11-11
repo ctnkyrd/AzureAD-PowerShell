@@ -6,5 +6,5 @@ Install AzureAD module to PowerShell : Install-Module -Name AzureAD
 2-To set App : $app = Get-AzureADApplication -Filter "AppId eq 'Your App ID'";
 3-To list reply urls(redirection urls) of your app : $app.ReplyUrls;
 4-To set a variable containing reply urls : $replyURLs = $app.ReplyURLs;
-5-To Add new reply url to application : $replyURLs.Add("trialUNHCRProgramme");
-6-To Remove reply url from application :  $replyURLs.Remove("trialUNHCRProgramme");
+5-To Add new reply url to application : $replyURLs.Add("https://yourapplication.com");
+6-To Remove reply url from application :  $replyURLs.Remove("https://yourapplication.com");
